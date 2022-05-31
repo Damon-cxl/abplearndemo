@@ -1,0 +1,25 @@
+{
+  "culture": "en",
+  "texts": {
+    "Menu:Home": "Home",
+    "Welcome": "Welcome",
+    "ObjectIsExist": "Object {0} is exist.",
+    "ObjectIsNotExist": "Object is not Exist.",
+    "Exception": "Exception! Please Contact with Admin.",
+    "Success": "Success.",
+    "StatusError": "Incorrect status, unable to operate!",
+    "ImportFailure": "Import failure.",
+    "ListIsEmpty": "There is no data in this list.",
+    "ValueIsNotValid": "The value is not valid.",
+    "DatabaseExecuteFailure": "Database execute failure.",
+    "ObjectIsNotInActive": "object is not in active.",
+    "ComponentsTypeIsNotExist": "ComponentsType is not exist.",
+    "ObjectIncludeChild": "object include child node.t.",
+    "ExistDuplicateValue": "Duplicates in the operation data.",
+    "ExploreBatchIsNullError": "workorder {0} has no batch",
+    "ImportRowErrors": "Import data error, please click download error file to modify",
+    "ImportTemplateErrors": "Import template error, please download the import template filling data again",
+    "GetSequenceField": "Get sequence number field",
+    "GetSequenceFieldrew": "Get sequence number field"
+  }
+}

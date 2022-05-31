@@ -1,0 +1,24 @@
+{
+    "culture": "zh-Hans",
+  "texts": {
+    "Menu:Home": "首页",
+    "Welcome": "欢迎",
+    "ObjectIsExist": "对象{0}已存在",
+    "ObjectIsNotExist": "对象不存在",
+    "Exception": "异常！请联系管理员",
+    "Success": "成功",
+    "StatusError": "非正常状态，禁止操作",
+    "ImportFailure": "导入失败",
+    "ListIsEmpty": "集合为空",
+    "ValueIsNotValid": "该值无效",
+    "DatabaseExecuteFailure": "数据库执行失败",
+    "ObjectIsNotInActive": "对象处于非激活状态",
+    "ComponentsTypeIsNotExist": "物料类型不存在",
+    "ObjectIncludeChild": "对象包含子节点",
+    "ExistDuplicateValue": "操作数据存在重复项.",
+    "ExploreBatchIsNullError": "工单 {0} 未创建批次号，不能分解!",
+    "ImportRowErrors": "导入数据错误,请按下载错误文件进行修改",
+    "ImportTemplateErrors": "导入模板错误,请重新下载导入模板填写数据",
+    "GetSequenceField": "获取序列号失败！"
+  }
+  }

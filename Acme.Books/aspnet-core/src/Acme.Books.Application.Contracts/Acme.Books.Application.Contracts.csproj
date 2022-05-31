@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\..\common.props" />
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <RootNamespace>Acme.Books</RootNamespace>
+	  <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+
+	<ItemGroup>
+		<EmbeddedResource Include="Localization\ApplicationContracts\*.*" />
+		<Content Remove="Localization\ApplicationContracts\*.*" />
+	</ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Acme.Books.Domain.Shared\Acme.Books.Domain.Shared.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+	  <PackageReference Include="Volo.Abp.Account.Application.Contracts" Version="4.4.4" />
+	  <PackageReference Include="Volo.Abp.Identity.Application.Contracts" Version="4.4.4" />
+	  <PackageReference Include="Volo.Abp.PermissionManagement.Application.Contracts" Version="4.4.4" />
+	  <PackageReference Include="Volo.Abp.TenantManagement.Application.Contracts" Version="4.4.4" />
+	  <PackageReference Include="Volo.Abp.FeatureManagement.Application.Contracts" Version="4.4.4" />
+  </ItemGroup>
+
+</Project>

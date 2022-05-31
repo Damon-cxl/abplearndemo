@@ -1,0 +1,19 @@
+{
+    "culture": "zh-Hant",
+    "texts": {
+      "Menu:Home": "首頁",
+      "Welcome": "歡迎",
+      "ObjectIsExist": "對象{0}已存在.",
+      "ObjectIsNotExist": "對象不存在",
+      "Exception": "異常！請聯繫管理員",
+      "Success": "成功",
+      "StatusError": "非正常狀態，禁止操作",
+      "ImportFailure": "導入失敗",
+      "ListIsEmpty": "集合為空",
+      "ValueIsNotValid": "該值無效",
+      "DatabaseExecuteFailure": "數據庫執行失敗",
+      "ObjectIsNotInActive": "對象處於非激活狀態",
+      "ComponentsTypeIsNotExist": "物料類型不存在",
+      "ObjectIncludeChild": "對象包含子節點"
+    }
+  }

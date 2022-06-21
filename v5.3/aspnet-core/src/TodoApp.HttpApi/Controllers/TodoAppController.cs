@@ -1,14 +1,27 @@
-﻿using TodoApp.Localization;
+﻿using Microsoft.AspNetCore.Mvc;
+using System.Threading.Tasks;
+using TodoApp.Localization;
 using Volo.Abp.AspNetCore.Mvc;
 
 namespace TodoApp.Controllers;
 
 /* Inherit your controllers from this class.
  */
-public abstract class TodoAppController : AbpControllerBase
+[Route("api/v1/[controller]")]
+public class TodoAppController : AbpControllerBase
 {
-    protected TodoAppController()
+    private ITodoAppAppService service;
+
+    public TodoAppController(ITodoAppAppService service)
     {
         LocalizationResource = typeof(TodoAppResource);
+        this.service = service;
+    }
+
+    [HttpPost]
+    [Route("[action]")]
+    public async Task<string> Create([FromBody] string input)
+    {
+        return await service.CreateBooksAsync(input);
     }
 }

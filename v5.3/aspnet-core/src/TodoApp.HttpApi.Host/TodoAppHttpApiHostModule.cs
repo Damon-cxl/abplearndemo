@@ -28,6 +28,10 @@ using Volo.Abp.Modularity;
 using Volo.Abp.Swashbuckle;
 using Volo.Abp.UI.Navigation.Urls;
 using Volo.Abp.VirtualFileSystem;
+using SkyApm.AspNetCore.Diagnostics;
+using SkyApm.Diagnostics.CAP;
+using Kengic.Shared.Tracing;
+using SkyApm.Tracing;
 
 namespace TodoApp;
 
@@ -58,6 +62,10 @@ public class TodoAppHttpApiHostModule : AbpModule
         ConfigureVirtualFileSystem(context);
         ConfigureCors(context, configuration);
         ConfigureSwaggerServices(context, configuration);
+        var services = context.Services;
+        services.AddSkyAPM(ext => ext.AddAspNetCoreHosting().AddCap());
+        services.OnRegistred(TracingInterceptorRegistrar.RegisterIfNeeded);
+        services.AddSingleton<ISegmentContextFactory, KengicSegmentContextFactory>();
     }
 
     private void ConfigureBundles()

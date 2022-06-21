@@ -40,7 +40,7 @@ namespace Acme.Books.Controllers
         [UnitOfWork(IsDisabled = true)]
         public async Task<object> NewBooks([FromBody] List<CreateBookQuery> input)
         {
-            return await service.CreateBooksAsync(input[0]);
+            return await service.CreateBookOnlysAsync(input[0]);
         }
     }
 }

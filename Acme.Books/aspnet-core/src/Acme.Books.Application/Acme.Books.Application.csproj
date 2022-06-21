@@ -6,6 +6,8 @@
     <TargetFramework>net6.0</TargetFramework>
     <RootNamespace>Acme.Books</RootNamespace>
 	  <GenerateDocumentationFile>true</GenerateDocumentationFile>
+	  <LangVersion>9.0</LangVersion>
+	  <Nullable>enable</Nullable>
   </PropertyGroup>
 
   <ItemGroup>

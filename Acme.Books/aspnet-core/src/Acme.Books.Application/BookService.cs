@@ -41,6 +41,7 @@ namespace Acme.Books
 
         public async Task<string> CreateBooksAsync(CreateBookQuery input)
         {
+            // await CreateBookTestNullAsync(input.Auths[0].Name, null);
             var temp = CurrentUnitOfWork; // 与调用方上下文为同一事务
             if (input.Publisher == "EX")
             {
@@ -66,6 +67,21 @@ namespace Acme.Books
                 throw new UserFriendlyException("cc");
             }
             return L["LongWelcomeMessage"];
+        }
+
+        public async Task<List<Book>> CreateBookTestNullAsync(string author, List<string> names = null)
+        {
+            List<Book> books = new List<Book>();
+            foreach (var item in names)
+            {
+                books.Add(new Book 
+                {
+                    Name = item,
+                    Authors= new List<Auth> { new Auth { Name = author } },
+                });
+            }
+
+            return books;
         }
     }
 }

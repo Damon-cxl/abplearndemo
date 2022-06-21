@@ -17,5 +17,7 @@ namespace Acme.Books
         Task<string> GetTestAsync(CreateBookQuery input);
 
         Task<string> CreateBooksAsync(CreateBookQuery input);
+
+        Task<string> CreateBookOnlysAsync(CreateBookQuery input);
     }
 }

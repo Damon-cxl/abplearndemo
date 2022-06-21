@@ -72,7 +72,7 @@ namespace Acme.Books
                 //    {
                 //        Name = input.Name
                 //    };
-                    
+
                 //    await repository.InsertAsync(book11,autoSave:true); // 事务内提交
                 //    var ss = "ssssssssss";
                 //    var query2 = await repository.FirstOrDefaultAsync(x => x.Name == book.Name); // 同事务内可查到
@@ -152,7 +152,7 @@ namespace Acme.Books
                             var query3 = await repository.FirstOrDefaultAsync(x => x.Name == item.Name);
                             await uow5.CompleteAsync();
                         }
-                        catch(Exception ee)
+                        catch (Exception ee)
                         {
                             await uow5.RollbackAsync(); // 事务回滚
                         }
@@ -163,6 +163,8 @@ namespace Acme.Books
             catch (Exception ex)
             { 
             }
+
+            // await bookService.CreateBooksAsync(input);
 
             var query4 = await repository.FirstOrDefaultAsync(x => x.Name == book0.Name); // 之前已提交，可查
             // await CurrentUnitOfWork.RollbackAsync(); // 事务回滚

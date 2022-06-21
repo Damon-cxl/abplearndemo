@@ -19,5 +19,7 @@ namespace Acme.Books
         Task<string> CreateBooksAsync(CreateBookQuery input);
 
         Task<string> ChangeBooksAsync(Book input);
+
+        Task<List<Book>> CreateBookTestNullAsync(string author, List<string> names);
     }
 }

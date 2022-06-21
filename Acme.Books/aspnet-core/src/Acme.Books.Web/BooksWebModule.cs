@@ -42,6 +42,10 @@ using Volo.Abp.AspNetCore.Mvc.ExceptionHandling;
 using Volo.Abp.Auditing;
 using Volo.Abp.Domain.Entities;
 using Volo.Abp.AspNetCore.Mvc.AntiForgery;
+using SkyApm.AspNetCore.Diagnostics;
+using SkyApm.Diagnostics.CAP;
+using Kengic.Shared.Tracing;
+using SkyApm.Tracing;
 
 namespace Acme.Books.Web
 {
@@ -99,6 +103,11 @@ namespace Acme.Books.Web
 
             //    options.Filters.Add(typeof(CustomExceptionFilter));
             //});
+
+            var services = context.Services;
+            services.AddSkyAPM(ext => ext.AddAspNetCoreHosting().AddCap());
+            services.OnRegistred(TracingInterceptorRegistrar.RegisterIfNeeded);
+            services.AddSingleton<ISegmentContextFactory, KengicSegmentContextFactory>();
         }
 
         private void ConfigureAbpAuditing()
